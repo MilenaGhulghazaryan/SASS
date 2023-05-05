@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.all {
+    width: 25%;
+    margin: auto;
+}
+
+$line: 1px solid red;
+
+@mixin animation() {
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.circle {
+    width: 270px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 30%;
+
+    .line {
+        border-right: 2px solid red;
+        height: 18vh;
+        @include animation();
+        left: 43%;
+        position: absolute;
+        width: 92px;
+        top: 18%;
+        transform-origin: 100% calc(100% - 5px);
+    }
+
+    .line2 {
+        border: $line;
+        @include animation();
+        animation-duration: 50s;
+        left: 43.5%;
+        position: absolute;
+        width: 92px;
+        top: 35%;
+        transform-origin: 100% calc(100% - 5px);
+    }
+
+}
